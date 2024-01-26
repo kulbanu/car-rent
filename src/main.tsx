@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './pages/Home'
 import './index.css'
 import '@fontsource/cherry-bomb-one'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { App } from './pages/Home/App'
 
 const router = createBrowserRouter([
   {
@@ -11,7 +11,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
 ])
-
+// @ts-expect-error
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <RouterProvider router={router} />

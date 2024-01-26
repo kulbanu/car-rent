@@ -8,7 +8,7 @@ export const Section = ({
   className?: string
 }) => {
   return (
-    <section className={`m-auto p-2 max-w-7xl mb-5 ${className}`}>
+    <section className={`m-auto p-2 max-w-5xl ${className}`}>
       {children}
     </section>
   )

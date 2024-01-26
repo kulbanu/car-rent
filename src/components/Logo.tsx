@@ -1,4 +1,4 @@
-export const Logo = () => {
+export const Logo = ({ contrast = false }: { contrast?: boolean }) => {
   return (
     <div className="flex flex-col jusify-center items-center w-fit">
       <svg
@@ -26,7 +26,11 @@ export const Logo = () => {
           fill="#EFBAB2"
         />
       </svg>
-      <span className="font-cherry text-primary text-3xl text-center">
+      <span
+        className={`font-cherry text-3xl text-center ${
+          contrast ? 'text-white' : 'text-primary'
+        }`}
+      >
         Ana men Bala
       </span>
     </div>
