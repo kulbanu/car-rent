@@ -1,6 +1,8 @@
+import { Link } from 'react-router-dom'
+
 export const Logo = ({ contrast = false }: { contrast?: boolean }) => {
   return (
-    <div className="flex flex-col jusify-center items-center w-fit">
+    <Link to="/" className="flex flex-col jusify-center items-center w-fit">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="72"
@@ -33,7 +35,7 @@ export const Logo = ({ contrast = false }: { contrast?: boolean }) => {
       >
         Ana men Bala
       </span>
-    </div>
+    </Link>
   )
 }
 

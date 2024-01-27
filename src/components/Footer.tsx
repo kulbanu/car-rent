@@ -1,8 +1,8 @@
 import { Band, Logo, Section } from '.'
 
-const Footer = () => {
+export const Footer = ({ className }: { className?: string }) => {
   return (
-    <Band className="bg-primary py-20 mb-0">
+    <Band className={`bg-primary py-20 ${className}`}>
       <Section className="grid grid-cols-3 gap-16">
         <div className="text-center">Sitemap</div>
         <div className="flex justify-center">

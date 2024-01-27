@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Section, Logo } from '../components'
 
 export const NavBar = () => {
@@ -7,7 +8,7 @@ export const NavBar = () => {
         <a>Home</a>
         <a>Home</a>
         <a>Home</a>
-        <a>Home</a>
+        <Link to="/chat">Chat</Link>
       </div>
       <Logo />
       <div className="flex gap-2">

@@ -1,0 +1,95 @@
+import { ChangeEvent, useEffect, useRef, useState } from 'react'
+import { Button, Section } from '../../components'
+import { sendMessage } from '../../api'
+import Markdown from 'react-markdown'
+
+const Chat = () => {
+  const [loading, setLoading] = useState(false)
+  const chatRef = useRef<HTMLDivElement>(null)
+  const [messages, setMessages] = useState<
+    {
+      author: string
+      message: string
+    }[]
+  >([])
+
+  const [myMessage, setMessage] = useState<string>('')
+
+  const onMessageChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setMessage(event.target.value)
+  }
+
+  useEffect(() => {
+    chatRef.current?.scrollTo(0, chatRef.current?.scrollHeight)
+  }, [messages])
+
+  const onSend = async () => {
+    setLoading(true)
+    setMessages([
+      ...messages,
+      {
+        author: 'me',
+        message: myMessage,
+      },
+    ])
+    const { response } = await sendMessage({
+      prompt: myMessage,
+    })
+    setMessage('')
+    setLoading(false)
+    setMessages((prev) => [
+      ...prev,
+      {
+        author: 'chat',
+        message: response,
+      },
+    ])
+  }
+
+  return (
+    <>
+      <Section className="flex flex-col place-items-center mb-5">
+        <h1 className="font-cherry text-3xl text-primary mb-8">
+          AI Assistant for young moms
+        </h1>
+        <div className="flex flex-col p-5 bg-primary rounded-xl w-full h-[450px]">
+          <div
+            ref={chatRef}
+            className="overflow-y-scroll flex flex-col flex-1 gap-5 px-5"
+          >
+            {messages.map(({ author, message }) => (
+              <p
+                className={`bg-white rounded-md w-fit p-2 ${
+                  author === 'me' ? 'self-end bg-bg' : 'self-start'
+                }`}
+              >
+                <Markdown>{message}</Markdown>
+              </p>
+            ))}
+            {loading && <img height={40} width={60} src="/assets/loader.gif" />}
+          </div>
+          <div className="flex pt-5 w-full">
+            <form
+              className="w-full"
+              onSubmit={(event) => {
+                event.preventDefault()
+                onSend()
+              }}
+            >
+              <input
+                disabled={loading}
+                onChange={onMessageChange}
+                type="text"
+                value={myMessage}
+                className="w-full p-2 bg-white rounded-md border-none outline-none"
+              />
+            </form>
+            <Button type="submit">Send</Button>
+          </div>
+        </div>
+      </Section>
+    </>
+  )
+}
+
+export default Chat
