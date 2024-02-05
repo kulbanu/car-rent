@@ -3,16 +3,16 @@ import { Section, Logo } from '../components'
 
 export const NavBar = () => {
   return (
-    <Section className="flex w-full justify-between items-center">
+    <Section className="flex pt-16 w-full justify-between items-center text-dark">
       <div className="flex gap-2">
-        <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/chat">Chat</Link>
+        <Link to="/">Басты бет</Link>
+        <Link to="/blog">Блог</Link>
+        <Link to="/chat">Чат</Link>
       </div>
       <Logo />
       <div className="flex gap-2">
-        <a>Register</a>
-        <a>Sign in</a>
+        <a>Тіркелу</a>
+        <a>Кіру</a>
       </div>
     </Section>
   )

@@ -28,9 +28,8 @@ const Card = ({ post }: IProps) => {
         src={`/assets/posts/${post.id}.jpg`}
       />
       <h3
-        className={`absolute bg-primary transition-all w-full left-0 bottom-${
-          showTitle ? '0' : '[-150px]'
-        } p-5 text-center`}
+        style={{ bottom: showTitle ? '0' : '-150px' }}
+        className={`absolute bg-primary transition-all w-full left-0 p-5 text-center`}
       >
         {post.title}
       </h3>

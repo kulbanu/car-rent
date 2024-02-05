@@ -1,4 +1,5 @@
 import { Button, Section } from '../../../components'
+import { products } from '../products'
 import ProductCard from './components/ProductCard'
 import Stars from './components/Stars'
 
@@ -13,7 +14,9 @@ const NewArrivals = () => {
         <Button>Explore</Button>
       </div>
       <div className="grid grid-cols-4 gap-4">
-        {new Array(10).fill(<ProductCard />)}
+        {products.map((product) => (
+          <ProductCard product={product} />
+        ))}
       </div>
     </Section>
   )

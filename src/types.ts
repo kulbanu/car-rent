@@ -3,3 +3,11 @@ export type Post = {
   title: string
   content: string
 }
+
+export type Product = {
+  id: number
+  title: string
+  price: number
+  description: string
+  image: string
+}

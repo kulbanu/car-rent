@@ -1,4 +1,4 @@
-import { Intro, KeyWordsLine, DreamShop, Magic } from './sections'
+import { Intro, DreamShop, Magic } from './sections'
 import NewArrivals from './sections/NewArrivals'
 import BabyNeeds from './sections/BabyNeeds'
 import BottomWall from './sections/BottomWall'

@@ -1,13 +1,14 @@
-import { NavBar, TopHeader, Footer } from '../components'
+import { NavBar, TopHeader, Modal, Footer } from '../components'
 import { Outlet } from 'react-router-dom'
 
 export const MainPageTemplate = () => {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative flex flex-col">
       <TopHeader />
       <NavBar />
       <Outlet />
-      <Footer />
+      <Footer className=" self-end" />
+      <Modal />
     </div>
   )
 }

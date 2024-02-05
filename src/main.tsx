@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import '@fontsource/cherry-bomb-one'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { App, Chat, Blog, Post } from './pages'
+import { App, Chat, Blog, Post, Product } from './pages'
 import { MainPageTemplate } from './templates'
 
 const router = createBrowserRouter([
@@ -26,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: 'post/:id',
         element: <Post />,
+      },
+      {
+        path: 'product/:id',
+        element: <Product />,
       },
     ],
   },
