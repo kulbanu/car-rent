@@ -4,7 +4,9 @@ import Section from './Section'
 export const TopHeader = () => {
   return (
     <Band className="bg-primary text-white">
-      <Section>Аналарға арналға күшті вебсайт десен</Section>
+      <Section className=" text-">
+        Аналарға арналға күшті вебсайт десен
+      </Section>
     </Band>
   )
 }

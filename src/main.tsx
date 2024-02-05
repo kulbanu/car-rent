@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import '@fontsource/cherry-bomb-one'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { App } from './pages/Home/App'
-import Chat from './pages/Chat'
+import { App, Chat, Blog, Post } from './pages'
 import { MainPageTemplate } from './templates'
 
 const router = createBrowserRouter([
@@ -20,9 +19,18 @@ const router = createBrowserRouter([
         path: '/chat',
         element: <Chat />,
       },
+      {
+        path: '/blog',
+        element: <Blog />,
+      },
+      {
+        path: 'post/:id',
+        element: <Post />,
+      },
     ],
   },
 ])
+
 // @ts-expect-error
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

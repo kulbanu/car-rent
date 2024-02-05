@@ -5,9 +5,8 @@ export const NavBar = () => {
   return (
     <Section className="flex w-full justify-between items-center">
       <div className="flex gap-2">
-        <a>Home</a>
-        <a>Home</a>
-        <a>Home</a>
+        <Link to="/">Home</Link>
+        <Link to="/blog">Blog</Link>
         <Link to="/chat">Chat</Link>
       </div>
       <Logo />

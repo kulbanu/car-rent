@@ -3,7 +3,7 @@ import { Button, Section } from '../../components'
 import { sendMessage } from '../../api'
 import Markdown from 'react-markdown'
 
-const Chat = () => {
+export const Chat = () => {
   const [loading, setLoading] = useState(false)
   const chatRef = useRef<HTMLDivElement>(null)
   const [messages, setMessages] = useState<

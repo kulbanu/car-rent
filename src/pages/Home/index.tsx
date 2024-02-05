@@ -7,7 +7,6 @@ export function App() {
   return (
     <>
       <Intro />
-      <KeyWordsLine />
       <DreamShop />
       <Magic />
       <NewArrivals />
