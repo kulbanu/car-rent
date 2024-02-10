@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { Band, Button } from '../../../components'
 
 export const DreamShop = () => {
@@ -8,7 +9,9 @@ export const DreamShop = () => {
         <br />
         сан-алуан сұрақтарға жауап ал!
       </h2>
-      <Button transparent>Блог оқу</Button>
+      <Link to="/blog">
+        <Button transparent>Блог оқу</Button>
+      </Link>
     </Band>
   )
 }

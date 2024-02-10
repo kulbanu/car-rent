@@ -19,7 +19,7 @@ export const Button = ({
         transparent
           ? 'bg-white bg-opacity-55 border-white border-2 text-white'
           : 'text-black'
-      }`}
+      } ${props.className}`}
     >
       {children}
     </button>

@@ -49,8 +49,8 @@ export const Chat = () => {
   return (
     <>
       <Section className="flex flex-col place-items-center mb-5">
-        <h1 className="font-cherry text-3xl text-primary mb-8">
-          AI Assistant for young moms
+        <h1 className="text-center text-3xl  mb-8">
+          Аналарға арналған Жалған Интеллектті Ассистент
         </h1>
         <div className="flex flex-col p-5 bg-primary rounded-xl w-full h-[450px]">
           <div
@@ -81,10 +81,12 @@ export const Chat = () => {
                 onChange={onMessageChange}
                 type="text"
                 value={myMessage}
-                className="w-full p-2 bg-white rounded-md border-none outline-none"
+                className="w-full p-2 bg-white rounded-xl border-none outline-none"
               />
             </form>
-            <Button type="submit">Send</Button>
+            <Button className="ml-2" type="submit">
+              Send
+            </Button>
           </div>
         </div>
       </Section>
