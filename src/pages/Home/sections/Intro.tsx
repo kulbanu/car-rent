@@ -1,9 +1,10 @@
+import { Link } from 'react-router-dom'
 import { Section, Button } from '../../../components'
 
 export const Intro = () => {
   return (
-    <Section className="px-8 py-4 relative bg-primary rounded-xl flex justify-between">
-      <div className="font-poppins font-bold text-7xl">
+    <Section className="px-8 py-4 relative bg-primary rounded-xl flex flex-col xl:flex-row justify-between">
+      <div className="font-poppins font-bold text-4xl md:text-7xl">
         <h1>Аңаларға арналған</h1>
         <h1 className="text-3xl mb-6">ыңғайлы вебсайт!</h1>
         <div className="flex gap-5 font-medium">
@@ -17,7 +18,9 @@ export const Intro = () => {
             <p className="text-2xl">Ерекше тауар</p>
           </div>
         </div>
-        <Button>Жасанды интеллектті қолдану</Button>
+        <Link to="/chat">
+          <Button>Жасанды интеллектті қолдану</Button>
+        </Link>
       </div>
       <img width={500} src="/assets/intro.png" />
     </Section>

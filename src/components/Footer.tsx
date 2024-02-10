@@ -3,8 +3,8 @@ import { Band, Fb, Insta, Logo, Section, Tw } from '.'
 
 export const Footer = ({ className }: { className?: string }) => {
   return (
-    <Band className={`bg-primary py-20 ${className}`}>
-      <Section className="flex justify-between">
+    <Band className={`bg-primary py-5 md:py-20 ${className}`}>
+      <Section className="flex justify-center md:justify-between">
         <div className="flex flex-col max-w-64 justify-center gap-2">
           <Logo />
           <p className="text-gray-500">
@@ -22,7 +22,7 @@ export const Footer = ({ className }: { className?: string }) => {
             </div>
           </div>
         </div>
-        <div className="flex gap-10">
+        <div className="hidden md:flex gap-10">
           <div className="flex flex-col gap-3">
             <h3 className="font-bold">Информация</h3>
             <Link className="text-gray-500" to="/">

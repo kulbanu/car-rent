@@ -9,7 +9,7 @@ const CartModal = observer(() => {
   return (
     <div className="z-30 bg-white rounded-xl overflow-hidden h-3/4 w-3/4 flex flex-col items-center p-5 gap-4">
       <h2 className="text-2xl">Қоржын</h2>
-      <div className="grid grid-cols-3 gap-3 overflow-y-scroll">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 overflow-y-scroll">
         {cart.cart.map((id) => (
           <div className="flex justify-between rounded-md p-3" key={id}>
             <ProductCard

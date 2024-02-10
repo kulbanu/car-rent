@@ -1,6 +1,9 @@
-export const Menu = () => {
+import { SVGProps } from 'react'
+
+export const Menu = (props: SVGProps<SVGSVGElement>) => {
   return (
     <svg
+      {...props}
       width="24"
       height="24"
       viewBox="0 0 24 24"

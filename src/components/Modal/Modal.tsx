@@ -10,7 +10,7 @@ export const Modal = observer(() => {
 
   return (
     <div
-      className="fixed top-0 left-0 w-screen h-screen items-center
+      className="fixed z-30 top-0 left-0 w-screen h-screen items-center
       justify-center"
       style={{ display: modal.status ? 'flex' : 'none' }}
     >

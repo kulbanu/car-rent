@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import '@fontsource/poppins'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { App, Chat, Blog, Post, Product } from './pages'
+import { App, Chat, Blog, Post, Product, Products } from './pages'
 import { MainPageTemplate } from './templates'
 
 const router = createBrowserRouter([
@@ -24,11 +24,15 @@ const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: 'post/:id',
+        path: '/post/:id',
         element: <Post />,
       },
       {
-        path: 'product/:id',
+        path: '/products',
+        element: <Products />,
+      },
+      {
+        path: '/product/:id',
         element: <Product />,
       },
     ],
