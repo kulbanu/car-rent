@@ -6,12 +6,14 @@ export const products: Product[] = [
     title: 'Детский велосипед',
     price: 15000,
     image: '/assets/products/kolaska.png',
+    bestSelling: true,
     description: 'Удобный и безопасный велосипед для детей от 3 до 5 лет.',
   },
   {
     id: 2,
     title: 'Конструктор LEGO',
     price: 8000,
+    bestSelling: true,
     image: '/assets/products/kolaska.png',
     description: 'Набор для сборки замка принцессы. 200 деталей.',
   },
@@ -19,6 +21,7 @@ export const products: Product[] = [
     id: 3,
     title: 'Мягкая игрушка медведь',
     price: 5000,
+    bestSelling: true,
     image: '/assets/products/kolaska.png',
     description: 'Большой плюшевый медведь высотой 60 см.',
   },
@@ -69,6 +72,22 @@ export const products: Product[] = [
   },
   {
     id: 10,
+    title: 'Детские кроссовки',
+    price: 10000,
+    image: '/assets/products/kolaska.png',
+    description:
+      'Удобные и модные кроссовки для активных игр на свежем воздухе.',
+  },
+  {
+    id: 11,
+    title: 'Детские кроссовки',
+    price: 10000,
+    image: '/assets/products/kolaska.png',
+    description:
+      'Удобные и модные кроссовки для активных игр на свежем воздухе.',
+  },
+  {
+    id: 12,
     title: 'Детские кроссовки',
     price: 10000,
     image: '/assets/products/kolaska.png',

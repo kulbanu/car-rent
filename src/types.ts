@@ -10,4 +10,5 @@ export type Product = {
   price: number
   description: string
   image: string
+  bestSelling?: boolean
 }

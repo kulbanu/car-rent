@@ -1,7 +1,7 @@
 import { makeAutoObservable } from 'mobx'
 
 class Cart {
-  cart: number[] = [1, 3]
+  cart: number[] = [1, 2, 3, 4, 5]
   constructor() {
     makeAutoObservable(this)
   }

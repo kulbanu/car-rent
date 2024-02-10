@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #fbf4eb;
+  padding: 20px 0 0;
   min-width: 320px;
   min-height: 100vh;
   overflow-x: hidden;

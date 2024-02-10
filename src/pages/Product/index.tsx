@@ -10,7 +10,13 @@ export const Product = observer(() => {
   return (
     product && (
       <Section className="flex flex-col items-center">
-        <img width={300} src={`/assets/products/${product.id}.png`} />
+        <div className="bg-white p-10 w-72 h-72 rounded-full">
+          <img
+            className="cursor-zoom-in hover:scale-[2.5] transition-all"
+            width={300}
+            src={`/assets/products/${product.id}.png`}
+          />
+        </div>
         <div className="flex flex-col items-center gap-1 text-center">
           <p className="font-thin uppercase">
             {Math.random() > 0.5 ? 'Жеңілдік' : 'Хит тауар'}
@@ -18,7 +24,7 @@ export const Product = observer(() => {
           <p className="font-semibold text-primary">{product.title}</p>
           <p>{product.price} ₸</p>
           <p>{product.description}</p>
-          {cart.cart.some((el) => el == product.id) ? (
+          {cart.cart.some((el) => el === product.id) ? (
             <Button onClick={() => cart.deleteProduct(product.id)}>
               Алып тастау
             </Button>

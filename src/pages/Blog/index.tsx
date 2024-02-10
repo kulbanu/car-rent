@@ -1,5 +1,4 @@
-import { Section } from '../../components'
-import Card from './components/Card'
+import { Section, PostCard } from '../../components'
 import { data } from './data'
 
 export const Blog = () => {
@@ -7,7 +6,7 @@ export const Blog = () => {
     <Section>
       <div className="grid grid-cols-3">
         {data.map((post) => (
-          <Card post={post} />
+          <PostCard post={post} />
         ))}
       </div>
     </Section>

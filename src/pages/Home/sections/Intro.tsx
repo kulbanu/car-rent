@@ -2,13 +2,24 @@ import { Section, Button } from '../../../components'
 
 export const Intro = () => {
   return (
-    <Section className="pt-0 relative">
-      <img src="/assets/intro.png" />
-      <div className="absolute left-0 top-1/3 font-cherry text-7xl text-primary">
-        <h1>Alaqai,</h1>
-        <h1>Balaqai!</h1>
-        <Button>Tapsyrys Beru</Button>
+    <Section className="px-8 py-4 relative bg-primary rounded-xl flex justify-between">
+      <div className="font-poppins font-bold text-7xl">
+        <h1>Аңаларға арналған</h1>
+        <h1 className="text-3xl mb-6">ыңғайлы вебсайт!</h1>
+        <div className="flex gap-5 font-medium">
+          <div>
+            <p className="text-3xl">50+</p>
+            <p className="text-2xl">Арнайы пост</p>
+          </div>
+          <div className="border-r-2 h-16 border-black" />
+          <div>
+            <p className="text-3xl">100+</p>
+            <p className="text-2xl">Ерекше тауар</p>
+          </div>
+        </div>
+        <Button>Жасанды интеллектті қолдану</Button>
       </div>
+      <img width={500} src="/assets/intro.png" />
     </Section>
   )
 }

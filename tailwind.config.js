@@ -3,13 +3,16 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     fontFamily: {
-      cherry: 'Cherry Bomb One',
+      cherry: 'Poppins',
+      oranienbaum: 'Oranienbaum',
       inter: 'Inter',
       arial: 'Arial',
+      body: 'Poppins',
     },
     extend: {
       colors: {
-        primary: '#FF9689',
+        primary: '#C1DCDC',
+        lightprimary: '#ffb6ad',
         secondary: '#ACDEE7',
         bg: '#FBF4EB',
         dark: '#4B4B4B',

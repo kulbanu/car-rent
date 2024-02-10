@@ -2,10 +2,10 @@ import { Section } from '../../../components'
 
 const BabyNeeds = () => {
   return (
-    <Section className="w-full grid grid-cols-2 mt-16 gap-20 items-center">
+    <Section className="w-full grid-cols-2 mt-16 gap-20 items-center hidden md:grid">
       <img src="assets/babyneeds.png" />
       <div className="flex flex-col gap-8">
-        <h2 className="font-cherry text-5xl text-primary uppercase">
+        <h2 className="font-cherry text-5xl  uppercase">
           Everything a baby needs
         </h2>
         <div>

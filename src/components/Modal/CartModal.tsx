@@ -2,19 +2,20 @@ import { observer } from 'mobx-react-lite'
 import { cart } from '../../mobx/Cart'
 import { products } from '../../pages/Home/products'
 import { Delete } from '..'
+import ProductCard from '../../pages/Home/sections/components/ProductCard'
+import { modal } from '../../mobx/Modal'
 
 const CartModal = observer(() => {
   return (
-    <div className="z-30 bg-white rounded-xl overflow-scroll h-3/4 w-3/4 flex flex-col items-center p-5 gap-4">
+    <div className="z-30 bg-white rounded-xl overflow-hidden h-3/4 w-3/4 flex flex-col items-center p-5 gap-4">
       <h2 className="text-2xl">Қоржын</h2>
-      <div className="flex flex-col gap-3">
+      <div className="grid grid-cols-3 gap-3 overflow-y-scroll">
         {cart.cart.map((id) => (
-          <div
-            className="flex relative justify-between border-secondary border-2 rounded-md p-3"
-            key={id}
-          >
-            <p>{products.find((elem) => elem.id === id)?.title}</p>
-            <p>{products.find((elem) => elem.id === id)?.price} ₸</p>
+          <div className="flex justify-between rounded-md p-3" key={id}>
+            <ProductCard
+              onClick={() => modal.closeModal()}
+              product={products[id - 1]}
+            />
             <Delete
               className=" cursor-pointer"
               onClick={() => cart.deleteProduct(id)}

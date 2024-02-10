@@ -5,9 +5,9 @@ export const Band = ({
   className,
 }: {
   children: ReactNode
-  className: string
+  className?: string
 }) => {
-  return <div className={`w-screen ${className}`}>{children}</div>
+  return <div className={`w-screen mt-8 ${className}`}>{children}</div>
 }
 
 export default Band

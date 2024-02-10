@@ -1,22 +1,21 @@
 import { Button, Section } from '../../../components'
 import { products } from '../products'
 import ProductCard from './components/ProductCard'
-import Stars from './components/Stars'
 
 const NewArrivals = () => {
   return (
-    <Section className="flex flex-col gap-8 mt-16">
-      <div className="w-full flex justify-between relative">
-        <Stars className="absolute left-[-135px] top-[-135px] scale-50" />
-        <h1 className="font-cherry text-4xl text-primary uppercase">
-          New Arrivals
-        </h1>
-        <Button>Explore</Button>
+    <Section className="flex gap-8 mt-16 items-center">
+      <div className="w-full flex flex-col max-w-48 gap-3">
+        <h1 className="text-xl font-bold uppercase">Біздің үздіу тауарлар</h1>
+        <p className="text-gray-500">
+          Сізге арналған сан-алуан тауарлар мен заттар
+        </p>
+        <Button primary>Барлығымен танысу</Button>
       </div>
-      <div className="grid grid-cols-4 gap-4">
-        {products.map((product) => (
-          <ProductCard product={product} />
-        ))}
+      <div className="flex-1 grid grid-cols-3 gap-4">
+        {products.map((product) => {
+          if (product.bestSelling) return <ProductCard product={product} />
+        })}
       </div>
     </Section>
   )

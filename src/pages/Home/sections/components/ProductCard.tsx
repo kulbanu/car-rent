@@ -1,23 +1,25 @@
 import { Link } from 'react-router-dom'
 import { Product } from '../../../../types'
-import { cart } from '../../../../mobx/Cart'
+import { AnchorHTMLAttributes } from 'react'
 
-const ProductCard = ({ product }: { product: Product }) => {
+const ProductCard = ({
+  product,
+  ...props
+}: { product: Product } & AnchorHTMLAttributes<HTMLAnchorElement>) => {
   return (
     <Link
+      {...props}
       to={`/product/${product.id}`}
-      className={`${
-        cart.cart.some((el) => product.id === el) ? 'bg-secondary' : 'bg-white'
-      } max-w-72 rounded-xl hover:shadow-sm hover:scale-105 transition ease-in-out cursor-pointer p-5 flex flex-col justify-center`}
+      className={`max-w-72 transition ease-in-out cursor-pointer p-5 flex flex-col items-start`}
     >
-      <img width={150} src={`/assets/products/${product.id}.png`} />
-      <div className="flex flex-col items-center gap-1 text-center">
-        <p className="font-thin uppercase">
-          {Math.random() > 0.5 ? 'Жеңілдік' : 'Хит тауар'}
-        </p>
-        <p className="font-semibold text-primary">{product.title}</p>
-        <p>{product.price} ₸</p>
+      <div className=" bg-secondary z-10 p-4 rounded-xl h-56 bg-opacity-30 hover:shadow-sm ">
+        <img
+          className="w-48 hover:scale-125 transition-all"
+          src={`/assets/products/${product.id}.png`}
+        />
       </div>
+      <p className="font-medium">{product.title}</p>
+      <p className="text-gray-400">₸ {product.price}</p>
     </Link>
   )
 }

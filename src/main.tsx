@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
-import '@fontsource/cherry-bomb-one'
+import '@fontsource/poppins'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { App, Chat, Blog, Post, Product } from './pages'
 import { MainPageTemplate } from './templates'
