@@ -101,7 +101,7 @@ export const Chat = () => {
                 className="w-full p-2 bg-white rounded-xl border-none outline-none"
               />
               <Button className="ml-2" type="submit">
-                Send
+                Жіберу
               </Button>
             </form>
           </div>
