@@ -12,3 +12,24 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 }
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Color of the scrollbar track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #116a6a; /* Color of the scrollbar handle */
+  border-radius: 20px; /* Make scrollbar handle rounded */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Change color of scrollbar handle on hover */
+}

@@ -50,27 +50,39 @@ export const Chat = () => {
     <>
       <Section className="flex flex-col place-items-center mb-5">
         <h1 className="text-center text-3xl  mb-8">
-          Аналарға арналған Жалған Интеллектті Ассистент
+          Аналарға арналған Жасанды Интеллектті Ассистент
         </h1>
-        <div className="flex flex-col p-5 bg-primary rounded-xl w-full h-[450px]">
-          <div
-            ref={chatRef}
-            className="overflow-y-scroll flex flex-col flex-1 gap-5 px-5"
-          >
-            {messages.map(({ author, message }) => (
-              <p
-                className={`bg-white rounded-md w-fit p-2 ${
-                  author === 'me' ? 'self-end bg-bg' : 'self-start'
-                }`}
-              >
-                <Markdown>{message}</Markdown>
+        <div className="flex flex-col p-5 justify-between bg-primary rounded-xl w-full h-[450px]">
+          {messages.length > 0 ? (
+            <div
+              ref={chatRef}
+              className="overflow-y-scroll rounded-xl flex flex-col flex-1 gap-5 px-5"
+            >
+              {messages.map(({ author, message }) => (
+                <p
+                  className={`bg-white rounded-md w-fit p-2 ${
+                    author === 'me' ? 'self-end bg-bg' : 'self-start'
+                  }`}
+                >
+                  <Markdown>{message}</Markdown>
+                </p>
+              ))}
+              {loading && (
+                <img height={40} width={60} src="/assets/loader.gif" />
+              )}
+            </div>
+          ) : (
+            <div className="h-full text-gray-500 flex flex-col justify-center items-center">
+              <img width={200} src="assets/bot.png" />
+              <p className="max-w-96 text-center">
+                Өзіңіздің қалаған сұрағыңызды қойып, Жасанды Интеллекттің
+                көмегімен сауалдарыңызға актуалды жауап табыңыз!
               </p>
-            ))}
-            {loading && <img height={40} width={60} src="/assets/loader.gif" />}
-          </div>
+            </div>
+          )}
           <div className="flex pt-5 w-full">
             <form
-              className="w-full"
+              className="w-full flex"
               onSubmit={(event) => {
                 event.preventDefault()
                 onSend()
@@ -83,10 +95,10 @@ export const Chat = () => {
                 value={myMessage}
                 className="w-full p-2 bg-white rounded-xl border-none outline-none"
               />
+              <Button className="ml-2" type="submit">
+                Send
+              </Button>
             </form>
-            <Button className="ml-2" type="submit">
-              Send
-            </Button>
           </div>
         </div>
       </Section>
