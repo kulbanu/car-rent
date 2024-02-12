@@ -25,7 +25,7 @@ export const PostCard = ({ post }: IProps) => {
         className={`absolute left-0 top-0 h-full object-cover brightness-${
           showTitle ? '100' : '50'
         } transition-all`}
-        src={`/assets/posts/${post.id}.jpg`}
+        src={`/assets/posts/${post.image}`}
       />
       <h3
         style={{ bottom: showTitle ? '0' : '-150px' }}

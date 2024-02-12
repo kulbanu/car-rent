@@ -4,8 +4,8 @@ import MagicCard from './components/MagicCard'
 export const Magic = () => {
   return (
     <Section className="flex flex-col items-center gap-8 mt-20 ">
-      <h2 className="text-4xl w-1/2 font-cherry font-bold text-center">
-        TWE BRING MAGIC IN YOUR HOMESWITH OUR ASSORTMENT
+      <h2 className="text-4xl w-1/2 font-poppins font-medium text-center">
+        Біздің посттарымызбен сіздерге жылулық әкелеміз!
       </h2>
       <div className="flex flex-col w-full justify-between md:flex-row items-center">
         <MagicCard num="one" />

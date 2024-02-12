@@ -11,7 +11,7 @@ export const Post = () => {
           <div className="relative h-60 flex items-center justify-center mb-10">
             <img
               className="absolute left-0 top-0 max-h-60 object-cover w-full mb-5 brightness-50"
-              src={`/assets/posts/${id}.jpg`}
+              src={`/assets/posts/${post.image}`}
             />
             <h1 className="absolute text-white text-3xl m-10 text-center">
               {post.title}

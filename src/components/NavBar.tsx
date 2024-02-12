@@ -14,16 +14,20 @@ export const NavBar = () => {
       <Section className="fixed z-40 left-0 top-0 bg-white md:static flex w-full justify-between items-center gap-10 text-dark font-poppins font-medium mt-0">
         <Logo />
         <div className="grid grid-cols-1 md:grid-cols-2 flex-1">
-          <div className="hidden md:flex gap-2">
+          <div className="hidden md:flex gap-4">
             <Link to="/">Басты бет</Link>
             <Link to="/blog">Блог</Link>
+            <Link to="/products">Тауарлар</Link>
             <Link to="/chat">Чат</Link>
           </div>
           <div className="flex gap-5 items-center justify-end">
             <Cart onClick={() => onCartClick()} />
             <Person />
-            <div className="border-r-2 border-1 border-black h-5" />
-            <Menu onClick={() => setShowMenu(!showMenu)} />
+            <div className="static md:hidden border-r-2 border-1 border-black h-5" />
+            <Menu
+              className="static md:hidden"
+              onClick={() => setShowMenu(!showMenu)}
+            />
           </div>
         </div>
       </Section>
