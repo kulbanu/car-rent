@@ -74,10 +74,15 @@ export const Chat = () => {
           ) : (
             <div className="h-full text-gray-500 flex flex-col justify-center items-center">
               <img width={200} src="assets/bot.png" />
-              <p className="max-w-96 text-center">
+              <p className="max-w-[500px] text-center">
                 Өзіңіздің қалаған сұрағыңызды қойып, Жасанды Интеллекттің
                 көмегімен сауалдарыңызға актуалды жауап табыңыз!
               </p>
+              <p>
+                Сервистің қосылуына орай, бірінші жауап{' '}
+                <b>әдеттегіден ұзақрақ</b> келуі мүмкін.
+              </p>
+              <p>Күткеніңізге рақмет!</p>
             </div>
           )}
           <div className="flex pt-5 w-full">
