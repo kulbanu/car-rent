@@ -15,7 +15,7 @@ export const products: Product[] = [
     price: 8000,
     bestSelling: true,
     image: '/assets/products/kolaska.png',
-    description: 'Набор для сборки замка принцессы. 200 деталей.',
+    description: 'Набор для сборки замка принцессы. 3000 деталей.',
   },
   {
     id: 3,
