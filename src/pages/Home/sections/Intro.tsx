@@ -5,8 +5,10 @@ export const Intro = () => {
   return (
     <Section className="px-8 py-4 relative bg-primary rounded-xl flex flex-col xl:flex-row justify-between">
       <div className="font-poppins font-bold text-4xl md:text-7xl">
-        <h1>Аңаларға арналған</h1>
-        <h1 className="text-3xl mb-6">ыңғайлы вебсайт!</h1>
+        <h1>Өмірдің алғашқы</h1>
+        <h1 className="text-3xl mb-6">
+          күндерінен бастап қамқорлық пен махаббат!
+        </h1>
         <div className="flex gap-5 font-medium">
           <div>
             <p className="text-3xl">50+</p>
