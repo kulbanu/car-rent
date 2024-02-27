@@ -31,7 +31,7 @@ const Calculator = () => {
         <Button primary onClick={calculateDueDate}>
           Есептеу
         </Button>
-        {dueDate && <p>Болжалған босану күні: {dueDate}</p>}
+        <p>Болжалған босану күні: {dueDate}</p>
       </div>
     </div>
   )
