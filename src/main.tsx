@@ -5,6 +5,7 @@ import '@fontsource/poppins'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { App, Chat, Blog, Post, Product, Products } from './pages'
 import { MainPageTemplate } from './templates'
+import Calculator from './pages/Calculator'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: '/product/:id',
         element: <Product />,
+      },
+      {
+        path: '/calculator',
+        element: <Calculator />,
       },
     ],
   },
