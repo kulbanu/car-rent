@@ -17,8 +17,9 @@ export const NavBar = () => {
           <div className="hidden md:flex gap-4">
             <Link to="/">Басты бет</Link>
             <Link to="/blog">Блог</Link>
-            <Link to="/products">Тауарлар</Link>
             <Link to="/chat">Чат</Link>
+            <Link to="/products">Тауарлар</Link>
+            <Link to="/calculator">Калькулятор</Link>
           </div>
           <div className="flex gap-5 items-center justify-end">
             <Cart onClick={() => onCartClick()} />
@@ -38,13 +39,11 @@ export const NavBar = () => {
           } shadow-xl left-0 flex flex-col items-center text-center w-full bg-white gap-2 p-2`}
           onClick={() => setShowMenu(false)}
         >
-          <Link className="border-black border-b-2 w-3/4" to="/">
-            Басты бет
-          </Link>
-          <Link className="border-black border-b-2 w-1/2" to="/blog">
-            Блог
-          </Link>
+          <Link to="/">Басты бет</Link>
+          <Link to="/blog">Блог</Link>
           <Link to="/chat">Чат</Link>
+          <Link to="/products">Тауарлар</Link>
+          <Link to="/calculator">Калькулятор</Link>
         </div>
       </div>
     </>
