@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { App, Chat, Blog, Post, Product, Products } from './pages'
 import { MainPageTemplate } from './templates'
 import Calculator from './pages/Calculator'
+import PregnancyCalendar from './pages/PregnancyCalendar'
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
       {
         path: '/calculator',
         element: <Calculator />,
+      },
+      {
+        path: '/calendar',
+        element: <PregnancyCalendar />,
       },
     ],
   },
