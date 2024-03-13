@@ -23,7 +23,10 @@ export const Product = observer(() => {
           </p>
           <p className="font-semibold text-primary">{product.title}</p>
           <p>{product.price} ₸</p>
-          <p>{product.description}</p>
+          <div
+            className="mb-10"
+            dangerouslySetInnerHTML={{ __html: product.description }}
+          />
           {cart.cart.some((el) => el === product.id) ? (
             <Button onClick={() => cart.deleteProduct(product.id)}>
               Алып тастау

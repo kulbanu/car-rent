@@ -7,9 +7,9 @@ const NewArrivals = () => {
   return (
     <Section className="flex flex-col md:flex-row gap-8 mt-16 items-center">
       <div className="w-full flex flex-col max-w-48 gap-3">
-        <h1 className="text-xl font-bold uppercase">Біздің үздіу тауарлар</h1>
+        <h1 className="text-xl font-bold uppercase">Біздің үздік тауарлар</h1>
         <p className="text-gray-500">
-          Сізге арналған сан-алуан тауарлар мен заттар
+          Аналар мен сәбилерге арналған ең жақсы өнімдерді зерттеңіз
         </p>
         <Link to="/products">
           <Button primary>Барлығымен танысу</Button>
