@@ -7,6 +7,9 @@ import { App, Chat, Blog, Post, Product, Products } from './pages'
 import { MainPageTemplate } from './templates'
 import Calculator from './pages/Calculator'
 import PregnancyCalendar from './pages/PregnancyCalendar'
+import SignUp from './pages/SignUp'
+import LogIn from './pages/LogIn'
+import Order from './pages/Order'
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/chat',
         element: <Chat />,
+      },      
+      {
+        path: '/order',
+        element: <Order />,
       },
       {
         path: '/blog',
@@ -46,6 +53,14 @@ const router = createBrowserRouter([
         element: <PregnancyCalendar />,
       },
     ],
+  },
+  {
+    path: '/login',
+    element: <LogIn />,
+  },
+  {
+    path: '/signup',
+    element: <SignUp />,
   },
 ])
 

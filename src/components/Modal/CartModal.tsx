@@ -1,11 +1,13 @@
 import { observer } from 'mobx-react-lite'
 import { cart } from '../../mobx/Cart'
 import { products } from '../../pages/Home/products'
-import { Delete } from '..'
+import { Button, Delete } from '..'
 import ProductCard from '../../pages/Home/sections/components/ProductCard'
 import { modal } from '../../mobx/Modal'
+import { useNavigate } from 'react-router-dom'
 
 const CartModal = observer(() => {
+  const navigate = useNavigate()
   return (
     <div className="z-30 bg-white rounded-xl overflow-hidden h-3/4 w-3/4 flex flex-col items-center p-5 gap-4">
       <h2 className="text-2xl">Қоржын</h2>
@@ -26,6 +28,15 @@ const CartModal = observer(() => {
       <p>{`Барлыгы: ${cart.cart
         .map((id) => products.find((elem) => elem.id === id)?.price || 0) // Add the default value of 0 in case the product is not found
         .reduce((acc, price) => acc + (price || 0), 0)} ₸`}</p>
+      <Button
+        onClick={() => {
+          navigate('/order')
+          modal.closeModal()
+        }}
+        primary
+      >
+        Тапсырыс беру
+      </Button>
     </div>
   )
 })
