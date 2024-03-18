@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom'
 import { Section, Logo, Cart, Person, Menu } from '../components'
 import { MODALS, modal } from '../mobx/Modal'
 import { useState } from 'react'
+import { getUserName } from '../utils/auth'
 
 export const NavBar = () => {
   const onCartClick = () => {
     modal.openModal(MODALS.CART_MODAL)
   }
   const [showMenu, setShowMenu] = useState(false)
+  const user = !!getUserName()
 
   return (
     <>
@@ -32,7 +34,7 @@ export const NavBar = () => {
             </details>
           </div>
           <div className="flex gap-5 items-center justify-end">
-            <Cart onClick={() => onCartClick()} />
+            {user && <Cart onClick={() => onCartClick()} />}
             <Person />
             <div className="static md:hidden border-r-2 border-1 border-black h-5" />
             <Menu

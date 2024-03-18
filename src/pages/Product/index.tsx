@@ -3,10 +3,12 @@ import { Button, Section } from '../../components'
 import { products } from '../Home/products'
 import { cart } from '../../mobx/Cart'
 import { observer } from 'mobx-react-lite'
+import { getUserName } from '../../utils/auth'
 
 export const Product = observer(() => {
   const { id } = useParams()
   const product = products.find((p) => p.id === parseInt(id || '1'))
+  const user = !!getUserName()
   return (
     product && (
       <Section className="flex flex-col items-center">
@@ -27,7 +29,7 @@ export const Product = observer(() => {
             className="mb-10"
             dangerouslySetInnerHTML={{ __html: product.description }}
           />
-          {cart.cart.some((el) => el === product.id) ? (
+          {user && cart.cart.some((el) => el === product.id) ? (
             <Button onClick={() => cart.deleteProduct(product.id)}>
               Алып тастау
             </Button>
