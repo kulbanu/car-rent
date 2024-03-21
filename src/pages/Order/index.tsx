@@ -11,8 +11,8 @@ const Order = observer(() => {
   const sendEmail = () => {
     emailjs
       .send(
-        'service_pqdclze',
-        'template_f0qc6a6',
+        'service_nujtejl',
+        'template_xt0hbll',
         {
           from_name: 'AnaMenBala',
           to_name: getUserName(),
@@ -22,13 +22,14 @@ const Order = observer(() => {
             .map((id) => products.find((elem) => elem.id === id)?.price || 0)
             .reduce((acc, price) => acc + (price || 0), 0),
         },
-        'pmfkH5HobQ84Rqjys'
+        's_WKZJ2ROSW_2u_El'
       )
       .then(
         () => {
           alert('Тапсырысыңыз жасалды!')
         },
-        () => {
+        (error) => {
+          console.log(error)
           alert('FAILED...')
         }
       )
