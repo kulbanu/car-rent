@@ -5,18 +5,10 @@ const BabyNeeds = () => {
     <Section className="w-full grid-cols-2 mt-16 gap-20 items-center hidden md:grid">
       <img src="assets/babyneeds.png" />
       <div className="flex flex-col gap-8">
-        <h2 className="font-cherry text-5xl  uppercase">
-          Everything a baby needs
+        <h2 className="font-cherry font-poppins md:text-2xl font-medium font-style: italic; uppercase">
+          Кішкентай ғажайыптарға қамқорлық жасаудың жауапты және қуанышты
+          жолында аналарды қолдау!
         </h2>
-        <div>
-          <p>Monday/Friday 9:00-23:00</p>
-          <p>Saturday 10:00-21:00</p>
-        </div>
-        <div>
-          <p>+012-345-6789</p>
-          <p>TheWildKingdom@contact.com</p>
-          <p>9889 Lorem Ipsum street, Pellentesque, CA, USA</p>
-        </div>
       </div>
     </Section>
   )

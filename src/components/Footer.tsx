@@ -24,19 +24,7 @@ export const Footer = ({ className }: { className?: string }) => {
         </div>
         <div className="hidden md:flex gap-10">
           <div className="flex flex-col gap-3">
-            <h3 className="font-bold">Информация</h3>
-            <Link className="text-gray-500" to="/">
-              Басты бет
-            </Link>
-            <Link className="text-gray-500" to="/">
-              Блог
-            </Link>
-            <Link className="text-gray-500" to="/">
-              Чат
-            </Link>
-          </div>
-          <div className="flex flex-col gap-3">
-            <h3 className="font-bold">Вебсайт</h3>
+            <h3 className="font-bold">Навигация</h3>
             <Link className="text-gray-500" to="/">
               Басты бет
             </Link>
@@ -50,13 +38,13 @@ export const Footer = ({ className }: { className?: string }) => {
           <div className="flex flex-col gap-3">
             <h3 className="font-bold">Байланыс</h3>
             <Link className="text-gray-500" to="/">
-              Басты бет
+              info@anamenbala.com
             </Link>
             <Link className="text-gray-500" to="/">
-              Блог
+              +7 707-733-5231
             </Link>
             <Link className="text-gray-500" to="/">
-              Чат
+              +7 775-051-4390
             </Link>
           </div>
         </div>
